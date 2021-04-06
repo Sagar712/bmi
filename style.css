@@ -149,7 +149,7 @@ body{
     font-size: 1.2rem;
     border-radius: 3px;
     border: none;
-    background-color: rgb(163, 203, 255);
+    background-color: rgb(115, 176, 255);
     padding: 0;
 }
 #height, #inches{
@@ -160,8 +160,14 @@ body{
     font-size: 1.2rem;
     border-radius: 3px;
     border: none;
-    background-color: rgb(163, 203, 255);
+    background-color: rgb(115, 176, 255);
     padding: 0;
+}
+#height:hover, #inches:hover, #wtt:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+#height:active, #inches:active, #wtt:active{
+    border: 2px solid rgb(255, 255, 255);
 }
 button{
     height: 2.5rem;
