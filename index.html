@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Know Health</title>
+</head>
+<body>
+    <header class="headerr"> <p style="margin: auto 0.9rem;">Know Health </p>
+        <div class="darkLight" onclick="darkLight()"><i class="fas fa-moon"></i></div>
+    </header>
+
+    <div class="allContent">
+        <div class="content1" onclick="popup()">
+            <i class="fas fa-balance-scale" id="logos"></i>
+            <hr style="border: 2px solid rgb(238, 255, 0); width: 2.8rem; margin: 0.3rem 0;height: 0.15rem;background-color: rgb(238, 255, 0);border-radius: 2px;">
+            BMI
+        </div>
+    </div>
+    <div class="popupwindow1">
+        <div class="closebtn" onclick="popup()">&times;</div>
+        <div class="ab" style="height: 0.6rem;"><p class="labels">Weight (kg)</p> </div>
+        <input type="number" placeholder=" Weight" autocomplete="off" id="wtt">
+
+        <div class="abc" style="height: 0.6rem;"><p class="labels">Height (feet)</p> </div>
+        <div class="heightt">
+            <input type="number" placeholder=" Foot" autocomplete="off" id="height">
+            <input type="number" placeholder=" Inch" autocomplete="off" id="inches">
+        </div>
+        
+        <button onclick="calcBmi()">OK</button>
+        <br>
+        <p style="color: white; font-weight: bold;">BMI is : <span id="bminum"></span></p>
+        <br>
+        <div class="arooww">
+            <div id="arrow">
+                <p style="font-size: 1.2rem;" id="intext">Click OK</p>
+                <i class="fas fa-sort-down" style="font-size: 1.8rem;"></i>
+            </div>
+            
+            <hr id="scaleofbmi">
+        </div>
+        
+    </div>
+    <div class="overlay"></div>
+    <script src="./app.js"></script>
+</body>
+</html>
