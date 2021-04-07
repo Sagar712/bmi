@@ -6,6 +6,8 @@ function darkLight() {
     let back3 = document.querySelector(".darkLight");
     let back4 = document.querySelector(".content1");
     let back5 = document.querySelector("#logos");
+    let back6 = document.querySelector(".content2");
+    let back7 = document.querySelector("#logos2");
 
 
     back1.classList.toggle("light");
@@ -13,10 +15,18 @@ function darkLight() {
     back3.classList.toggle("light");
     back4.classList.toggle("light");
     back5.classList.toggle("light");
+    back6.classList.toggle("light");
+    back7.classList.toggle("light");
 }
 
 function popup() {
     let btn = document.querySelector(".popupwindow1");
+    let overlay = document.querySelector(".overlay");
+    btn.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+function popup2() {
+    let btn = document.querySelector(".popupwindow2");
     let overlay = document.querySelector(".overlay");
     btn.classList.toggle("active");
     overlay.classList.toggle("active");
@@ -62,4 +72,36 @@ function calcBmi() {
     else{
         status.innerText = "Impossible hai";
     }
+}
+
+async function fetchData() {
+    let choice = document.getElementById("seachCon").value;
+    let contents;
+    if(choice>=18.5 && choice<=24.9){
+        await fetch("./DietPlans/Underweight.txt")
+        .then( res => {
+            return res.text();
+        })
+        .then(response => {
+            contents = response;
+            console.log(contents);
+        });
+        document.getElementById("dietplan").innerText = contents;
+    }
+
+    else if(choice>=25 && choice<=30){
+        await fetch("./DietPlans/Normal.txt")
+        .then( res => {
+            return res.text();
+        })
+        .then(response => {
+            contents = response;
+            console.log(contents);
+        });
+        document.getElementById("dietplan").innerText = contents;
+    }
+
+
+    else
+        document.getElementById("dietplan").innerText = "Invalid BMI !!";
 }

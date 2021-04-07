@@ -32,11 +32,23 @@ body{
 #logos{
     font-size: 3.5rem;
     color: rgb(17, 12, 0);
-    background: -webkit-linear-gradient(right,  rgb(104, 29, 0), rgb(0, 0, 0), rgb(0, 58, 112));
+    background: -webkit-linear-gradient(right,  rgb(34, 139, 43), rgb(0, 58, 112));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 #logos.light{
+    background: -webkit-linear-gradient(right,  rgb(253, 183, 156), rgb(255, 253, 253), rgb(136, 197, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#logos2{
+    font-size: 3.5rem;
+    color: rgb(17, 12, 0);
+    background: -webkit-linear-gradient(right,  rgb(104, 29, 0), rgb(0, 58, 112));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#logos2.light{
     background: -webkit-linear-gradient(right,  rgb(253, 183, 156), rgb(255, 253, 253), rgb(136, 197, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -70,8 +82,7 @@ body{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.content1{
-    
+.content1, .content2{
     height: 10rem;
     width: 10rem;
     display: flex;
@@ -87,20 +98,21 @@ body{
     border-radius: 8px;
     box-shadow: 0 0 15px 0px rgb(47, 73, 110);
     border:none;
+    margin: 2rem;
 }
-.content1.light:active{
+.content1.light:active, .content2.light:active{
     background-color: rgb(7, 35, 77);
     transform: scale(0.98);
     box-shadow: 0 0 5px 0px black;
     border: 3px solid rgb(32, 75, 139);
 }
-.content1.light{
+.content1.light, .content2.light{
     background-color: rgb(14, 48, 100);
     color: white;
     box-shadow: 0 0 15px 2px black;
     border: 3px solid rgb(66, 123, 207);
 }
-.content1:active{
+.content1:active, .content2:active{
     background-color: rgb(95, 159, 255);
     box-shadow: 0 0 10px 0px rgb(24, 43, 68);
 }
@@ -117,14 +129,14 @@ body{
     transition: all 0.4s ease;
     
 }
-.popupwindow1{
+.popupwindow1, .popupwindow2{
     height: 80vh;
     width: 50vw;
     position: fixed;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(0, 62, 143);
+    background-color: rgb(0, 24, 56);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,7 +148,7 @@ body{
     z-index: 99;
     opacity: 0;
 }
-.popupwindow1.active{
+.popupwindow1.active, .popupwindow2.active{
     visibility: visible;
     transition: all 0.3s ease;
     opacity: 1;
@@ -149,8 +161,8 @@ body{
     font-size: 1.2rem;
     border-radius: 3px;
     border: none;
-    background-color: rgb(115, 176, 255);
-    padding: 0;
+    background-color: rgb(240, 241, 243);
+    box-shadow: 0 0 10px 0 rgb(0, 24, 44);
 }
 #height, #inches{
     height: 1.8rem;
@@ -160,8 +172,8 @@ body{
     font-size: 1.2rem;
     border-radius: 3px;
     border: none;
-    background-color: rgb(115, 176, 255);
-    padding: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 0 rgb(0, 24, 44);
 }
 #height:hover, #inches:hover, #wtt:hover{
     border: 2px solid rgb(255, 255, 255);
@@ -254,6 +266,33 @@ button:active{
     transition: all 0.3s ease;
 }
 
+#seachCon{
+    height: 2rem;
+    width: 15rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(0, 24, 44);
+    font-size: 1rem;
+    
+}
+
+.searchbtn{
+    height: 2rem;
+    font-size: 1.2rem;
+    width: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(0, 24, 44);
+}
+
+#dietplan{
+    height: 70%;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    color: rgb(160, 205, 226);
+}
+
 @media screen and (max-width:960px){
     .headerr{
         font-size: 1.5rem;
@@ -261,10 +300,14 @@ button:active{
         justify-content: flex-start;
 
     }
-    .content1{
+    .allContent{
+        display: flex;
+        flex-direction: column;
+    }
+    .content1, .content2{
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
-    .popupwindow1{
+    .popupwindow1, .popupwindow2{
         width: 95vw;
     }
     .closebtn:active{
