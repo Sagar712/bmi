@@ -8,7 +8,7 @@ function darkLight() {
     let back5 = document.querySelector("#logos");
     let back6 = document.querySelector(".content2");
     let back7 = document.querySelector("#logos2");
-
+    let back8 = document.querySelector(".copyrt");
 
     back1.classList.toggle("light");
     back2.classList.toggle("light");
@@ -17,6 +17,7 @@ function darkLight() {
     back5.classList.toggle("light");
     back6.classList.toggle("light");
     back7.classList.toggle("light");
+    back8.classList.toggle("light");
 }
 
 function popup() {
